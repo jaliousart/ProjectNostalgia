@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 56
+  controlID: 102
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 99
+  controlID: 103
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 100
+  controlID: 104
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -338,20 +338,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Assets
+    - Assets/Assets/Idle Animation
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Assets
+  - Assets/Assets/Idle Animation
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\Unity Projects\ProjectNostalgia\Project Nostaligia
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 923b0000
-    m_LastClickedID: 15250
-    m_ExpandedIDs: 00000000c2380000ca380000923b0000963b0000
+    m_SelectedIDs: da380000
+    m_LastClickedID: 14554
+    m_ExpandedIDs: 00000000cc380000ce380000d8380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -379,7 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c2380000
+    m_ExpandedIDs: 00000000cc380000ce380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -407,7 +407,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300007c3b0000523b0000
+    m_ExpandedInstanceIDs: c6230000523b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -564,9 +564,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.623391, y: 1.4476815, z: -3.1074798}
+    m_Target: {x: -4.2995358, y: 1.0668739, z: -6.8945312}
     speed: 2
-    m_Value: {x: -4.518817, y: 2.0983517, z: -3.050962}
+    m_Value: {x: -4.2995358, y: 1.0668739, z: -6.8945312}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -616,9 +616,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 14.994981
+    m_Target: 9.492701
     speed: 2
-    m_Value: 15.7015505
+    m_Value: 9.083924
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -693,8 +693,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -662.5
     m_HBaseRangeMax: 662.5
-    m_VBaseRangeMin: -317
-    m_VBaseRangeMax: 317
+    m_VBaseRangeMin: -327.5
+    m_VBaseRangeMax: 327.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -711,11 +711,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1325
-      height: 634
+      height: 655
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 662.5, y: 317}
+    m_Translation: {x: 662.5, y: 327.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -723,9 +723,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -662.5
-      y: -317
+      y: -327.5
       width: 1325
-      height: 634
+      height: 655
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1325, y: 655}
