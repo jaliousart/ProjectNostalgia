@@ -477,4 +477,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterInput: {fileID: 1940582086}
   jumpForce: 1600
-  moveForce: 5
+  moveForce: 100
+  maxSpeed: 8
