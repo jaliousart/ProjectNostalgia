@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 839, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 127
+  controlID: 47
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 563, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 101
+  controlID: 71
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 563, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 102
+  controlID: 72
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -302,8 +302,8 @@ MonoBehaviour:
     height: 628
   m_ViewDataDictionary: {fileID: 0}
   m_ResetOnNextRepaint: 0
-  m_SelectedAssetPath: Assets/Assets/character/Seperated Limbs Character Model.psb
-  m_SelectedSpriteRectGUID: a47c80cc5a386de4b93cd773ac3200e6
+  m_SelectedAssetPath: Assets/Assets/character/Seperated Limbs Character Model B.psb
+  m_SelectedSpriteRectGUID: d983a0d2ee2f88e4c9d7f15fd993603f
   m_LastUsedModuleTypeName: UnityEditor.U2D.Animation.SkinningModule
 --- !u!114 &13
 MonoBehaviour:
@@ -360,23 +360,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 28470000
+      m_SelectedIDs: fe480000
       m_LastClickedID: 0
-      m_ExpandedIDs: 98d6ffffa4f5ffffd2f6ffff06470000
+      m_ExpandedIDs: d6f6ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Torso
-        m_OriginalName: Torso
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -10634
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 4.0358343
     speed: 2
-    m_Value: 4.2260046
+    m_Value: 4.0358343
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -549,10 +549,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -539.5
-    m_HBaseRangeMax: 539.5
-    m_VBaseRangeMin: -303.5
-    m_VBaseRangeMax: 303.5
+    m_HBaseRangeMin: -558
+    m_HBaseRangeMax: 558
+    m_VBaseRangeMin: -314
+    m_VBaseRangeMax: 314
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -569,11 +569,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1325
-      height: 607
+      height: 628
     m_Scale: {x: 1.2298737, y: 1.2298737}
-    m_Translation: {x: 663.51685, y: 303.5}
+    m_Translation: {x: 663.51685, y: 314}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -581,9 +581,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -539.5
-      y: -246.77332
+      y: -255.31078
       width: 1077.3464
-      height: 493.54663
+      height: 510.62155
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1325, y: 628}
@@ -740,23 +740,23 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 88420000
-    m_LastClickedID: 17032
-    m_ExpandedIDs: 00000000784200007a4200007c4200007e42000086420000
+    m_SelectedIDs: ae440000
+    m_LastClickedID: 17582
+    m_ExpandedIDs: 000000008c4400008e4400009044000092440000ac440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scenes
-      m_OriginalName: Scenes
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 17048
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -770,7 +770,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000784200007a4200007c4200007e420000
+    m_ExpandedIDs: 000000008c4400008e4400009044000092440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
