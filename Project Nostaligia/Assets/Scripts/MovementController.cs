@@ -26,44 +26,44 @@ public class MovementController : MonoBehaviour
     }
     private void Move()
     {
-        switch (CharacterState)
-        {
-            case CharacterState.Idle:
-                break;
-            case CharacterState.Walk:
-                break;
-            case CharacterState.Jump:
-                break;
-            case CharacterState.Fall:
-                break;
-            case CharacterState.Cling:
-                break;
-            case CharacterState.Crouch:
-                break;
-            case CharacterState.Crawl:
-                break;
-            case CharacterState.Slide:
-                break;
-            default:
-                break;
-        }
+        //switch (CharacterState)
+        //{
+        //    case CharacterState.Idle:
+        //        break;
+        //    case CharacterState.Walk:
+        //        break;
+        //    case CharacterState.Jump:
+        //        break;
+        //    case CharacterState.Fall:
+        //        break;
+        //    case CharacterState.Cling:
+        //        break;
+        //    case CharacterState.Crouch:
+        //        break;
+        //    case CharacterState.Crawl:
+        //        break;
+        //    case CharacterState.Slide:
+        //        break;
+        //    default:
+        //        break;
+        //}
         //if (characterInput.Jump && isGrounded)
         //{
         //    AddForce(new Vector2(0f, jumpForce));
         //    isGrounded = false;
         //    Debug.Log("Character jumped");
         //}
-        //if (isGrounded)
-        //{
-        //    if (rbody.velocity.magnitude <= maxSpeed)
-        //    {
-        //        AddForce(new Vector2(moveForce * characterInput.Direction, 0f));
-        //    }
-        //    else if (characterInput.Crouch)
-        //    {
+        if (isGrounded)
+        {
+            if (rbody.velocity.magnitude <= maxSpeed)
+            {
+                AddForce(new Vector2(moveForce * characterInput.Direction, 0f));
+            }
+            else if (characterInput.Crouch)
+            {
 
-        //    }
-        //}
+            }
+        }
     }
     private void AddForce(Vector2 direction)
     {
