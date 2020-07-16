@@ -25,7 +25,7 @@ public class CharacterInput : MonoBehaviour
         else
             Jump = false;
         //Debug.Log("Jump is " + Jump);
-    }
+    } 
     private void GetCrouch()
     {
         if (Input.GetAxis("Crouch") > 0.1f)
@@ -33,6 +33,6 @@ public class CharacterInput : MonoBehaviour
         else
             Crouch = false;
         //Debug.Log("Crouch is " + Crouch);
-    }
+    }    
 }
 
