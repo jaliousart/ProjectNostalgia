@@ -32,7 +32,7 @@ public class CharacterInput : MonoBehaviour
             Crouch = true;
         else
             Crouch = false;
-        //Debug.Log("Crouch is " + Crouch);
+       // Debug.Log("Crouch is " + Crouch);
     }    
 }
 

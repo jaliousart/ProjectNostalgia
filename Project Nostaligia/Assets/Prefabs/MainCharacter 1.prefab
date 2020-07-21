@@ -1302,6 +1302,8 @@ MonoBehaviour:
   jumpForce: 850
   moveForce: 100
   maxSpeed: 10
+  walkFactor: 1
+  crawlFactor: 0.35
 --- !u!114 &3987641575154423554
 MonoBehaviour:
   m_ObjectHideFlags: 0
