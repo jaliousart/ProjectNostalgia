@@ -7,17 +7,12 @@ public class MovementController : MonoBehaviour
     public CharacterInput characterInput;
     public float jumpForce;
     public float moveForce;
-    public float maxSpeed;
-
-    
-    public float walkFactor;
-    public float crawlFactor;
+    public float walkSpeed;
+    public float crawlSpeed;  
 
     private Rigidbody2D rbody;
     private Animator animator;
     private bool movementLocked;
-
-    private float moveFactor;
 
     private bool isGrounded
     {
@@ -29,7 +24,8 @@ public class MovementController : MonoBehaviour
         {
             animator.SetBool("isGrounded", value);
         }
-    } private bool Crouched
+    }
+    private bool Crouched
     {
         get
         {
@@ -40,6 +36,17 @@ public class MovementController : MonoBehaviour
             animator.SetBool("Crouched", value);
         }
     }    
+    private float Speed
+    {
+        get
+        {
+            return animator.GetFloat("Speed");
+        }
+        set
+        {
+            animator.SetFloat("Speed",value);
+        }
+    }
     // Update is called once per frame
     private void Start()
     {
@@ -64,48 +71,37 @@ public class MovementController : MonoBehaviour
     }
     private void Walk()
     {
+
         switch (Crouched)
         {
             case true:
-                moveFactor = crawlFactor;
+                if (rbody.velocity.magnitude < crawlSpeed)
+                    AddForce(characterInput.Direction * moveForce, 0f);
                 break;
             case false:
-                moveFactor = walkFactor;
+                if (rbody.velocity.magnitude < walkSpeed)
+                    AddForce(characterInput.Direction * moveForce, 0f);
                 break;
         }
-
-        if (rbody.velocity.magnitude < maxSpeed * moveFactor)
-        {
-            AddForce(characterInput.Direction * moveForce * moveFactor, 0f);            
-        }
-
-        if (rbody.velocity.x > 0.1f || rbody.velocity.x < -0.1f)
-            animator.SetBool("isMoving", true);
-        else
-            animator.SetBool("isMoving", false);
-                    
+        SetCharacterSpeed();
     }
     private void Jump()
     {
-        if (characterInput.Jump && isGrounded)
+        if (characterInput.Jump && isGrounded && !Crouched)
         {
             AddForce(0f, jumpForce);
             isGrounded = false;
             animator.SetTrigger("Jump");
         }
-        if (rbody.velocity.y < 0.0f)
+        if (rbody.velocity.y < -0.5f)
             animator.SetTrigger("Fall"); 
     }
     private void Crouch()
     {
         if (characterInput.Crouch && isGrounded)
-        {
-            Crouched = true;           
-        }
+            Crouched = true;
         else
-        {
-            Crouched = false;            
-        }
+            Crouched = false;
     }
     private void SwitchDirection()
     {
@@ -116,7 +112,19 @@ public class MovementController : MonoBehaviour
                 this.transform.localScale = new Vector3(1f, 1f, 1f);
         }
     }    
-    
+    private void SetCharacterSpeed()
+    {
+        switch (Crouched)
+        {
+            case true:
+                Speed = Mathf.Abs(rbody.velocity.x);
+                break;
+            case false:
+                Speed = Mathf.Abs(rbody.velocity.x);
+                break;
+        }
+        Speed = Mathf.Round(Speed * 10f)/10f;
+    }
     private void AddForce(float xFac, float yFac)
     {
         rbody.AddForce(new Vector3(xFac,yFac));
