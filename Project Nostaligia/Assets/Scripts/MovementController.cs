@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
@@ -8,7 +6,8 @@ public class MovementController : MonoBehaviour
     public float jumpForce;
     public float moveForce;
     public float walkSpeed;
-    public float crawlSpeed;  
+    public float crawlSpeed;
+   
 
     private Rigidbody2D rbody;
     private Animator animator;
@@ -35,7 +34,7 @@ public class MovementController : MonoBehaviour
         {
             animator.SetBool("Crouched", value);
         }
-    }    
+    }
     private float Speed
     {
         get
@@ -44,7 +43,7 @@ public class MovementController : MonoBehaviour
         }
         set
         {
-            animator.SetFloat("Speed",value);
+            animator.SetFloat("Speed", value);
         }
     }
     // Update is called once per frame
@@ -67,22 +66,18 @@ public class MovementController : MonoBehaviour
             Jump();
             Crouch();
         }
-        
+
     }
     private void Walk()
     {
-
-        switch (Crouched)
+        float tanOfNormal = GetTanOfGround();
+        if (rbody.velocity.magnitude < walkSpeed)
         {
-            case true:
-                if (rbody.velocity.magnitude < crawlSpeed)
-                    AddForce(characterInput.Direction * moveForce, 0f);
-                break;
-            case false:
-                if (rbody.velocity.magnitude < walkSpeed)
-                    AddForce(characterInput.Direction * moveForce, 0f);
-                break;
+            AddForce(characterInput.Direction * Mathf.Cos(tanOfNormal) * moveForce, Mathf.Sin(tanOfNormal) * moveForce);
+            Debug.DrawRay(transform.position, new Vector3(characterInput.Direction * Mathf.Cos(tanOfNormal), Mathf.Sin(tanOfNormal)), Color.cyan);
         }
+
+        SetCharacterFriction(tanOfNormal);
         SetCharacterSpeed();
     }
     private void Jump()
@@ -94,7 +89,7 @@ public class MovementController : MonoBehaviour
             animator.SetTrigger("Jump");
         }
         if (rbody.velocity.y < -0.5f)
-            animator.SetTrigger("Fall"); 
+            animator.SetTrigger("Fall");
     }
     private void Crouch()
     {
@@ -105,13 +100,14 @@ public class MovementController : MonoBehaviour
     }
     private void SwitchDirection()
     {
-        if (isGrounded) {
+        if (isGrounded)
+        {
             if (characterInput.Direction > 0.1f)
                 this.transform.localScale = new Vector3(-1f, 1f, 1f);
             else if (characterInput.Direction < -0.1f)
                 this.transform.localScale = new Vector3(1f, 1f, 1f);
         }
-    }    
+    }
     private void SetCharacterSpeed()
     {
         switch (Crouched)
@@ -123,23 +119,56 @@ public class MovementController : MonoBehaviour
                 Speed = Mathf.Abs(rbody.velocity.x);
                 break;
         }
-        Speed = Mathf.Round(Speed * 10f)/10f;
+        Speed = Mathf.Round(Speed * 10f) / 10f;
+    }
+    private void SetCharacterFriction(float tan)
+    {
+        if (transform.localScale.x > 0)
+        {
+            rbody.sharedMaterial.friction = (1f / (Mathf.Abs(Mathf.Atan(tan) + 1f)));
+        }
+        else if (transform.localScale.x < 0)
+        {
+            rbody.sharedMaterial.friction = (1f / (Mathf.Abs(Mathf.Atan(tan) - 1f)));
+        }
+        else
+        rbody.sharedMaterial.friction = 1f;
+        Debug.Log("Friction Coeff " + rbody.sharedMaterial.friction);    
+    }
+    private float GetTanOfGround()
+    {
+        int layerMask = 1 << 8;
+
+        Vector3 rayOrigon = transform.position + new Vector3(0f, 0.5f);
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigon, new Vector2(0f, -1f), 1f, layerMask);
+
+        if (hit.collider != null)
+            Debug.DrawRay(rayOrigon, new Vector3(0f, -1f) * hit.distance, Color.green);
+
+        else
+            Debug.DrawRay(rayOrigon, new Vector3(0f, -1f), Color.red);
+
+
+        //Debug.Log(Mathf.Atan2(hit.normal.x, hit.normal.y));
+        return Mathf.Atan2(hit.normal.x, hit.normal.y);
     }
     private void AddForce(float xFac, float yFac)
     {
-        rbody.AddForce(new Vector3(xFac,yFac));
+        rbody.AddForce(new Vector3(xFac, yFac));
     }
     private void SwitchMovementLock()
     {
-        movementLocked =! movementLocked;
+        movementLocked = !movementLocked;
         Debug.Log("Movement is locked: " + movementLocked);
-    }   
-    private void OnCollisionEnter2D(Collision2D other)
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         isGrounded = true;
     }
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit(Collider other)
     {
         isGrounded = false;
     }
+
+
 }
