@@ -23,18 +23,7 @@ public class MovementController : MonoBehaviour
         {
             animator.SetBool("isGrounded", value);
         }
-    }
-    private bool Crouched
-    {
-        get
-        {
-            return animator.GetBool("Crouched");
-        }
-        set
-        {
-            animator.SetBool("Crouched", value);
-        }
-    }
+    }    
     private float Speed
     {
         get
@@ -64,25 +53,36 @@ public class MovementController : MonoBehaviour
             SwitchDirection();
             Walk();
             Jump();
-            Crouch();
         }
 
     }
     private void Walk()
     {
-        float tanOfNormal = GetTanOfGround();
+        float normalAngle = GetTanOfGround();
         if (rbody.velocity.magnitude < walkSpeed)
         {
-            AddForce(characterInput.Direction * Mathf.Cos(tanOfNormal) * moveForce, Mathf.Sin(tanOfNormal) * moveForce);
-            Debug.DrawRay(transform.position, new Vector3(characterInput.Direction * Mathf.Cos(tanOfNormal), Mathf.Sin(tanOfNormal)), Color.cyan);
+            if (characterInput.Direction > 0 && normalAngle < 0 || characterInput.Direction < 0 && normalAngle > 0) //going up a hill
+            {
+                Debug.Log("Uphill");
+                AddForce(characterInput.Direction * Mathf.Cos(normalAngle) * moveForce, Mathf.Abs(Mathf.Sin(normalAngle)) * moveForce);
+                Debug.DrawRay(transform.position, new Vector3(Mathf.Cos(normalAngle) * characterInput.Direction, Mathf.Abs(Mathf.Sin(normalAngle))), Color.cyan);
+            }
+            else if (characterInput.Direction > 0 && normalAngle > 0 || characterInput.Direction < 0 && normalAngle < 0) // going down a hill
+            {
+                Debug.Log("Downhill");
+                AddForce(characterInput.Direction * Mathf.Cos(normalAngle) * moveForce, -Mathf.Abs(Mathf.Sin(normalAngle)) * moveForce);
+                Debug.DrawRay(transform.position, new Vector3(Mathf.Cos(normalAngle) * characterInput.Direction, -Mathf.Abs(Mathf.Sin(normalAngle))), Color.cyan);
+            }
+            else
+            {
+                AddForce(characterInput.Direction * moveForce, 0f);
+            }
+            SetCharacterSpeed();
         }
-
-        SetCharacterFriction(tanOfNormal);
-        SetCharacterSpeed();
     }
     private void Jump()
     {
-        if (characterInput.Jump && isGrounded && !Crouched)
+        if (characterInput.Jump && isGrounded)
         {
             AddForce(0f, jumpForce);
             isGrounded = false;
@@ -90,13 +90,10 @@ public class MovementController : MonoBehaviour
         }
         if (rbody.velocity.y < -0.5f)
             animator.SetTrigger("Fall");
-    }
-    private void Crouch()
+    } 
+    private void SetCharacterSpeed()
     {
-        if (characterInput.Crouch && isGrounded)
-            Crouched = true;
-        else
-            Crouched = false;
+        Speed = Mathf.Abs(rbody.velocity.x);
     }
     private void SwitchDirection()
     {
@@ -107,34 +104,7 @@ public class MovementController : MonoBehaviour
             else if (characterInput.Direction < -0.1f)
                 this.transform.localScale = new Vector3(1f, 1f, 1f);
         }
-    }
-    private void SetCharacterSpeed()
-    {
-        switch (Crouched)
-        {
-            case true:
-                Speed = Mathf.Abs(rbody.velocity.x);
-                break;
-            case false:
-                Speed = Mathf.Abs(rbody.velocity.x);
-                break;
-        }
-        Speed = Mathf.Round(Speed * 10f) / 10f;
-    }
-    private void SetCharacterFriction(float tan)
-    {
-        if (transform.localScale.x > 0)
-        {
-            rbody.sharedMaterial.friction = (1f / (Mathf.Abs(Mathf.Atan(tan) + 1f)));
-        }
-        else if (transform.localScale.x < 0)
-        {
-            rbody.sharedMaterial.friction = (1f / (Mathf.Abs(Mathf.Atan(tan) - 1f)));
-        }
-        else
-        rbody.sharedMaterial.friction = 1f;
-        Debug.Log("Friction Coeff " + rbody.sharedMaterial.friction);    
-    }
+    }     
     private float GetTanOfGround()
     {
         int layerMask = 1 << 8;
@@ -149,7 +119,7 @@ public class MovementController : MonoBehaviour
             Debug.DrawRay(rayOrigon, new Vector3(0f, -1f), Color.red);
 
 
-        //Debug.Log(Mathf.Atan2(hit.normal.x, hit.normal.y));
+        //Debug.Log(Mathf.Atan2(hit.normal.x, hit.normal.y));        
         return Mathf.Atan2(hit.normal.x, hit.normal.y);
     }
     private void AddForce(float xFac, float yFac)
