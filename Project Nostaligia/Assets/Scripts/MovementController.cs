@@ -117,6 +117,10 @@ public class MovementController : MonoBehaviour
         if (rbody.velocity.y < -0.5f)
             animator.SetTrigger("Fall");
     } 
+    private void Slide()
+    {
+
+    }
     private void SetCharFriction(float coeff)
     {
         PhysicsMaterial2D material = rbody.sharedMaterial;
