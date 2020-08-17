@@ -3,11 +3,16 @@
 public class MovementController : MonoBehaviour
 {
     public CharacterInput characterInput;
+
+    [Header("Movement Settings")]
     public float jumpForce;
     public float moveForce;
     public float walkSpeed;
-    public float crawlSpeed;
-   
+
+    [Header("Friction Settings")]
+    public float defaultFriction;
+    public float uphillFriction;
+    public float downhillFriction;
 
     private Rigidbody2D rbody;
     private Animator animator;
@@ -35,6 +40,17 @@ public class MovementController : MonoBehaviour
             animator.SetFloat("Speed", value);
         }
     }
+    private bool isSliding
+    {
+        get
+        {
+            return animator.GetBool("isSliding");
+        }
+        set
+        {
+            animator.SetBool("isSliding", value);
+        }
+    }
     // Update is called once per frame
     private void Start()
     {
@@ -59,27 +75,37 @@ public class MovementController : MonoBehaviour
     private void Walk()
     {
         float normalAngle = GetTanOfGround();
+
         if (rbody.velocity.magnitude < walkSpeed)
         {
             if (characterInput.Direction > 0 && normalAngle < 0 || characterInput.Direction < 0 && normalAngle > 0) //going up a hill
             {
-                Debug.Log("Uphill");
-                AddForce(characterInput.Direction * Mathf.Cos(normalAngle) * moveForce, Mathf.Abs(Mathf.Sin(normalAngle)) * moveForce);
-                Debug.DrawRay(transform.position, new Vector3(Mathf.Cos(normalAngle) * characterInput.Direction, Mathf.Abs(Mathf.Sin(normalAngle))), Color.cyan);
+                AddForce(characterInput.Direction * Mathf.Cos(normalAngle) * moveForce, Mathf.Abs(Mathf.Sin(normalAngle + 5f)) * moveForce);
+                Debug.DrawRay(transform.position, new Vector3(Mathf.Cos(normalAngle) * characterInput.Direction, Mathf.Abs(Mathf.Sin(normalAngle + 5))), Color.cyan);
+                //SetCharFriction(uphillFriction);
+                
             }
             else if (characterInput.Direction > 0 && normalAngle > 0 || characterInput.Direction < 0 && normalAngle < 0) // going down a hill
             {
-                Debug.Log("Downhill");
                 AddForce(characterInput.Direction * Mathf.Cos(normalAngle) * moveForce, -Mathf.Abs(Mathf.Sin(normalAngle)) * moveForce);
                 Debug.DrawRay(transform.position, new Vector3(Mathf.Cos(normalAngle) * characterInput.Direction, -Mathf.Abs(Mathf.Sin(normalAngle))), Color.cyan);
+               //SetCharFriction(downhillFriction);
             }
             else
             {
                 AddForce(characterInput.Direction * moveForce, 0f);
+                Debug.DrawRay(transform.position, new Vector3(Mathf.Cos(normalAngle) * characterInput.Direction, Mathf.Abs(Mathf.Sin(normalAngle))), Color.cyan);
+                //SetCharFriction(downhillFriction);
+                //SetCharFriction(defaultFriction);
             }
+            Debug.Log(rbody.sharedMaterial.friction);
             SetCharacterSpeed();
         }
-    }
+        if (characterInput.Direction > -0.1 && characterInput.Direction < 0.1f)
+        {
+            SetCharFriction(defaultFriction);
+        }
+    } 
     private void Jump()
     {
         if (characterInput.Jump && isGrounded)
@@ -91,6 +117,11 @@ public class MovementController : MonoBehaviour
         if (rbody.velocity.y < -0.5f)
             animator.SetTrigger("Fall");
     } 
+    private void SetCharFriction(float coeff)
+    {
+        PhysicsMaterial2D material = rbody.sharedMaterial;
+        material.friction = coeff;
+    }
     private void SetCharacterSpeed()
     {
         Speed = Mathf.Abs(rbody.velocity.x);
