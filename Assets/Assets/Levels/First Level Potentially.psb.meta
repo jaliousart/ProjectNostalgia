@@ -1,0 +1,584 @@
+fileFormatVersion: 2
+guid: 897803580901b8b4e938c52e67da8195
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 500
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: They are going to forget...
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 12494
+      y: 1023
+      width: 1072
+      height: 74
+    spriteID: 5e87d6779de63f549a9b188e3fa85678
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 6078, y: -70}
+  - name: Texture Gradient
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 14470
+      y: 4
+      width: 988
+      height: 1270
+    spriteID: 2fba6c3e8f3e5ed4f814dfe5cb714a39
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 8610, y: 4}
+  - name: Texture
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6262
+      width: 106
+      height: 949
+    spriteID: 64e2d46ee9edbcc4e9cb105bdaeee0ba
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -6623, y: 6262}
+  - name: Texture_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5111
+      width: 106
+      height: 1143
+    spriteID: 5890ccca503e0324caaf472ccb2270ed
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -5975, y: 4984}
+  - name: Ground Plane
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 965
+      y: 1282
+      width: 12482
+      height: 1270
+    spriteID: 85368c2426b7b2e469bd2e51012ab95d
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 965, y: 1282}
+  - name: Retrive  the  memory
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 404
+      y: 2063
+      width: 427
+      height: 331
+    spriteID: cc42c7f85d15ca44ca65a37ad57742e2
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -3473, y: 1639}
+  - name: Layer 0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 12482
+      height: 1270
+    spriteID: d4681edf1270cf9459b9cdc561e9fb1d
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  - name: Slope Block
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 12494
+      y: 4
+      width: 1968
+      height: 773
+    spriteID: 0a51d69ac7a50a64eb686f4c484f0b6e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4361, y: -46}
+  - name: Slide Wall
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 15466
+      y: 4
+      width: 556
+      height: 1083
+    spriteID: 694b780b2af2bf548a29b0c337b90878
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5359, y: -183}
+  - name: Final Wall
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4111
+      width: 127
+      height: 992
+    spriteID: 0e1cad6eb1438794cad143ec6795959a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -12351, y: 3833}
+  - name: Triangle Slope
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 12494
+      y: 785
+      width: 1674
+      height: 230
+    spriteID: 00b9fd2bd7ce7654885893140f0229fc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1686, y: 735}
+  - name: Big Block
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1282
+      width: 953
+      height: 773
+    spriteID: a06011051dc1afc4589df50cd93aa19b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -6626, y: 1232}
+  - name: Texture Gradient_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 16030
+      y: 4
+      width: 249
+      height: 1099
+    spriteID: 9864a2769fcbcf641b6a4c3a0915d38f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 10189, y: -167}
+  - name: Skinny Wall
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3181
+      width: 184
+      height: 922
+    spriteID: 03a1bd63ef1c28041884c49b3478b58b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -5894, y: 2833}
+  - name: First Wall
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2063
+      width: 392
+      height: 1110
+    spriteID: 67b87d63a99246948bfe841ee0457eef
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -4904, y: 1903}
+  - name: Mini Jump
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 14176
+      y: 785
+      width: 197
+      height: 133
+    spriteID: ad02211c00861134fa1ceece1c53671c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 9838, y: 735}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 12482, y: 1270}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 16384
+  textureActualHeight: 16384
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: They are going to forget...
+    spriteName: They are going to forget...
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5e87d6779de63f549a9b188e3fa85678
+    layerID: 21
+    mosaicPosition: {x: 12494, y: 1023}
+  - name: Slope Block
+    spriteName: Slope Block
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0a51d69ac7a50a64eb686f4c484f0b6e
+    layerID: 68
+    mosaicPosition: {x: 12494, y: 4}
+  - name: Slide Wall
+    spriteName: Slide Wall
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 694b780b2af2bf548a29b0c337b90878
+    layerID: 69
+    mosaicPosition: {x: 15466, y: 4}
+  - name: Final Wall
+    spriteName: Final Wall
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0e1cad6eb1438794cad143ec6795959a
+    layerID: 70
+    mosaicPosition: {x: 4, y: 4111}
+  - name: Triangle Slope
+    spriteName: Triangle Slope
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 00b9fd2bd7ce7654885893140f0229fc
+    layerID: 71
+    mosaicPosition: {x: 12494, y: 785}
+  - name: Texture Gradient
+    spriteName: Texture Gradient
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2fba6c3e8f3e5ed4f814dfe5cb714a39
+    layerID: 64
+    mosaicPosition: {x: 14470, y: 4}
+  - name: Texture
+    spriteName: Texture
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 64e2d46ee9edbcc4e9cb105bdaeee0ba
+    layerID: 63
+    mosaicPosition: {x: 4, y: 6262}
+  - name: Big Block
+    spriteName: Big Block
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a06011051dc1afc4589df50cd93aa19b
+    layerID: 73
+    mosaicPosition: {x: 4, y: 1282}
+  - name: Texture Gradient
+    spriteName: Texture Gradient_1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9864a2769fcbcf641b6a4c3a0915d38f
+    layerID: 77
+    mosaicPosition: {x: 16030, y: 4}
+  - name: Texture
+    spriteName: Texture_1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5890ccca503e0324caaf472ccb2270ed
+    layerID: 62
+    mosaicPosition: {x: 4, y: 5111}
+  - name: Skinny Wall
+    spriteName: Skinny Wall
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 03a1bd63ef1c28041884c49b3478b58b
+    layerID: 75
+    mosaicPosition: {x: 4, y: 3181}
+  - name: First Wall
+    spriteName: First Wall
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 67b87d63a99246948bfe841ee0457eef
+    layerID: 74
+    mosaicPosition: {x: 4, y: 2063}
+  - name: Mini Jump
+    spriteName: Mini Jump
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ad02211c00861134fa1ceece1c53671c
+    layerID: 76
+    mosaicPosition: {x: 14176, y: 785}
+  - name: Ground Plane
+    spriteName: Ground Plane
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 85368c2426b7b2e469bd2e51012ab95d
+    layerID: 35
+    mosaicPosition: {x: 965, y: 1282}
+  - name: Retrive  the  memory
+    spriteName: Retrive  the  memory
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cc42c7f85d15ca44ca65a37ad57742e2
+    layerID: 7
+    mosaicPosition: {x: 404, y: 2063}
+  - name: Layer 0
+    spriteName: Layer 0
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d4681edf1270cf9459b9cdc561e9fb1d
+    layerID: 34
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: First Level Potentially Texture
+  prefabAssetName: First Level Potentially Prefab
+  spriteLibAssetName: First Level Potentially Sprite Lib
+  secondarySpriteTextures: []
